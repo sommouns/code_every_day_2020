@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo {
+            animation: parabola-hor 2s;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        #item {
+            animation: parabola-ver 2s;
+            animation-timing-function: linear;
+            background: greenyellow;
+            height: 20px;
+            width: 20px;
+        }
+        @keyframes parabola-hor 
+        {
+            0%  {
+                transform: translateX(0)
+            }
+            100% {
+                transform: translateX(100px);
+            }
+        }
+        @keyframes parabola-ver
+        {
+            0%  {
+                transform: translateY(0)
+            }
+            100% {
+                transform: translateY(100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="demo">
+        <div id="item"></div>
+    </div>
+</body>
+</html>
