@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hello</title>
+</head>
+
+<body>
+        <div id="app" data-server-rendered="true">hello time<button>test</button></div>
+</body>
+
+</html>
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        template: '<div>hell {{name}}<button @click="test">test</button><button @click="test">test</button></div>',
+        data: {
+            name: 'gg'
+        },
+        methods: {
+            test() {
+                console.log(1)
+            }
+        }
+    })
+    app.$mount('#app')
+</script>
