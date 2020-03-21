@@ -138,8 +138,40 @@ mixins: [React.addons.PureRenderMixin]
 
 constructor(props) {
   super(props)
-  this.shouldComponentUpdate = React.addons.PureRenderMixin.shouldComponentUpdate.bind(this)
+  this.shouldComponentUpdate = 	React.addons.PureRenderMixin.shouldComponentUpdate.bind(this)
 }
 ```
 
 + 子组件触发更新父组件，父组件更新全部自组件都要diff面，一旦更改了state，上面方法全部歇菜
+
+### Redux
+
+![image-20200321154144080](/Users/apple/Library/Application Support/typora-user-images/image-20200321154144080.png)
+
++ 管理应用的state
+  + state.getState()
+  + state.dispatch(aciton)
+  + store.subscribe(listener)
+  + store.createStore(reducer, [initState])
+
++ reudx.min.js
+
++ React-redux.js 
+
++ Redux-thunk.min.js
+
++ keyMirror.js
+
++ Immutable.min.js
+
++ Request.js(fetch)
+
++ ReduxThunk.js
+
++ Provider(React-Redux)注入store
+
+  ```jsx
+  <Provider store={store}> <App /> </Provider>
+  ```
+
+  
