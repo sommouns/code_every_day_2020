@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d0 {
+            height: 1px;
+            background: black;
+        }
+
+        .d1 {
+            height: 1px;
+            background: black;
+            transform: scaleY(0.5);
+        }
+
+        .d2 {
+            height: 1px;
+            background: linear-gradient(0deg, #fff, #000);
+        }
+
+        .d3 {
+            height: 1px;
+            background: none;
+            box-shadow: 0 0.5px 0 #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d0"></div>
+    <h3>方案一：scale</h3>
+    <div class="d1"></div>
+    <h3>方案二：linear-gradient</h3>
+    <div class="d2"></div>
+    linear-gradient(0deg, #fff,
+    #000)的意思是：渐变的角度从下往上，从白色#fff渐变到黑色#000，而且是线性的，在高清屏上，1px的逻辑像素代表的物理（设备）像素有2px，由于是线性渐变，所以第1个px只能是#fff，而剩下的那个像素只能是#000，这样就达到了画一半的目的。
+    <h3>方案三：box-shadow</h3>
+    <div class="d3"></div>
+    <h4>方案四：&lt;meta name="viewport" content="width=device-width,initial-sacle=0.5"></h4>
+</body>
+
+</html>
