@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ele1">
+        <div class="ele2">
+            <div class="ele3">click me</div>
+        </div>
+    </div>
+    <script>
+        const ele1 = document.querySelector('.ele1')
+        const ele2 = document.querySelector('.ele2')
+        const ele3 = document.querySelector('.ele3')
+        ele1.addEventListener('click', (e) => {console.log(e)}, true)
+        ele2.addEventListener('click', () => {console.log(2)}, true)
+        ele3.addEventListener('click', () => {console.log(3)}, true)
+    </script>
+</body>
+</html>
